@@ -96,12 +96,7 @@
         state: absent
       loop: "{{out.files}}"
       
-    - name: Download WAR file 
-      get_url:
-        url: "{{WAR_URL}}"
-        dest: "{{TOMCAT_DIR}}/webapps/student.war"
-
-    - name: Download JAR File 
+   - name: Download JAR File 
       get_url:
         url: "{{JAR_URL}}"
         dest: "{{TOMCAT_DIR}}/lib/mysql-connector-java.jar" 
